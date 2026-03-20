@@ -13,7 +13,6 @@ contract MerkleAirdrop is EIP712 {
     error MerkleAirdrop__AlreadyClaimed();
     error MerkleAirdrop__InvalidSignature();
 
-    address[] climers;
     bytes32 private immutable i_merkleRoot;
     IERC20 private immutable i_airdropToken;
     mapping(address claimer => bool claimed) private s_hasClaimed;
